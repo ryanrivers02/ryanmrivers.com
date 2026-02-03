@@ -556,4 +556,15 @@
                 }
                 
             } catch (error) {
-                console.error('Form submissi
+                console.error('Form submission error:', error);
+                errorMsg.classList.add('show');
+                errorMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } finally {
+                // Re-enable button
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Request Demo';
+            }
+        });
+    </script>
+</body>
+</html>
